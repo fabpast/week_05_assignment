@@ -1,17 +1,14 @@
 $(document).ready(function() {
   var doSomeStuff = function(event) {
-    // prevents form submission
     event.preventDefault();
-    // reads user input which will be a city name
-    var city = $('#city-type').val();
-    // converts the city name to lowercase (so that we don't have to worry about case-sensitive)
-    var lowerCase = city.toLowerCase();
-    // check if city is 'nyc'
     if (lowerCase === "nyc" || "new york city") {
-      // change the body's background image to the 'nyc.jpg' image
-      $('body').css('background-image', 'url(images/nyc.jpg)');    
+      $('body').css('background-image', 'url(images/nyc.jpg)');
+    } else if (lowerCase === "la" || "los angeles") {
+      $('body').css('background-image', 'url(images/la.jpg)');
     }
   }
-
+// I moved these two variables (city and lowerCase) outside the if function because "else if" couldn't read them
+  var city = $('#city-type').val();
+  var lowerCase = city.toLowerCase();
   $('form').submit(doSomeStuff)
 });
