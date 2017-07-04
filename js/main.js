@@ -1,9 +1,9 @@
 $(document).ready(function() {
   var doSomeStuff = function(event) {
     event.preventDefault();
-    if (lowerCase === "nyc" || "new york city") {
+    if (lowerCase === "nyc" || lowerCase ==="new york city") {
       $('body').css('background-image', 'url(images/nyc.jpg)');
-    } else if (lowerCase === "la" || "los angeles") {
+    } else if (lowerCase === "la" || lowerCase === "los angeles") {
       $('body').css('background-image', 'url(images/la.jpg)');
     }
   }
